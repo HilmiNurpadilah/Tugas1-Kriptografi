@@ -3,7 +3,9 @@ Aplikasi Web Simulasi Kriptografi Klasik
 """
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from datetime import datetime
+import sys
 import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from algorithms import caesar, vigenere, affine, hill, playfair
 import numpy as np
 
@@ -168,6 +170,6 @@ def index():
 def history():
     history = session.get('history', [])
     return render_template('history.html', history=history)
-
+    
 if __name__ == '__main__':
     app.run(debug=True)
