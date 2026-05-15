@@ -3,18 +3,8 @@
 Aplikasi web edukatif untuk mensimulasikan algoritma kriptografi klasik dengan visualisasi proses perhitungan secara detail.
 
 ## Fitur
-- 5 Algoritma: Caesar, Vigenere, Affine, Hill (2x2 & 3x3), Playfair
-- Enkripsi & Dekripsi
-- Visualisasi proses langkah demi langkah
-- UI modern, responsive, dark/light mode
-- History enkripsi/dekripsi
-- Validasi & error handling ramah pengguna
 
 ## Teknologi
-- Python 3
-- Flask
-- Bootstrap 5
-- Numpy
 
 ## Instalasi
 1. Clone repo ini
@@ -27,12 +17,16 @@ Aplikasi web edukatif untuk mensimulasikan algoritma kriptografi klasik dengan v
    python app.py
    ```
 
-## Struktur Folder
-- app.py
-- requirements.txt
-- README.md
-- /algorithms
-- /templates
+## Deploy ke Vercel
+1. Push project ini ke GitHub.
+2. Import repository ke Vercel.
+3. Pastikan framework terdeteksi sebagai Python.
+4. Vercel akan memakai [app.py](app.py) sebagai entrypoint Flask.
+5. Jika perlu, biarkan `vercel.json` yang ada di root project tetap dipakai.
+6. Tambahkan environment variable `SECRET_KEY` di Vercel untuk session yang lebih aman.
+
+Catatan: history disimpan di session cookie, jadi data history bersifat sementara dan mengikuti browser yang dipakai.
+
 - /static
 
 ## Screenshot

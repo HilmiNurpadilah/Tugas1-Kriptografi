@@ -3,12 +3,13 @@ Aplikasi Web Simulasi Kriptografi Klasik
 """
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from datetime import datetime
+import os
 from algorithms import caesar, vigenere, affine, hill, playfair
 import numpy as np
 
 
 app = Flask(__name__)
-app.secret_key = 'kriptografi2026'
+app.secret_key = os.environ.get('SECRET_KEY', 'kriptografi2026')
 
 ALGORITHMS = {
     'caesar': {
@@ -169,4 +170,4 @@ def history():
     return render_template('history.html', history=history)
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
