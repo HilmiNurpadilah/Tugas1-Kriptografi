@@ -29,8 +29,6 @@ Catatan: history disimpan di session cookie, jadi data history bersifat sementar
 
 - /static
 
-## Screenshot
-![Screenshot Placeholder](static/screenshot.png)
-
 ## Demo
-[Link Demo Placeholder](#)
+https://kriptografi-hilminurpadilah.my.id/
+
